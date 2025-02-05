@@ -1,398 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Oliver Wang | Senior Software Engineer</title>
-  
-  <!-- Bootstrap 5 CSS (CDN) -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    integrity="sha384-ENjdO4Dr2bkBIFxQpe5tnjWKejHc2Ni1wr2juR8zUPz4Wj87+0s2GA6p4YfF7hD3" 
-    crossorigin="anonymous"
-  />
-  <!-- Font Awesome (Icons) -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DyQd2+Gf1uIYMEAg6Tx3p1HT4z2HHoUu4tJc+1IvwcXsDtqQVf0mfsy/VlsYCBXQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" 
-  />
 
-  <style>
-    /* =====================
-       BASIC GLOBAL STYLES
-       ===================== */
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 16px;
-      color: #333;
-      background-color: #f8f9fa;
-    }
-    a {
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section-heading {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .subheading {
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      color: #495057;
-    }
-    .resume-link {
-      font-weight: 600;
-      font-size: 1rem;
-      color: #0d6efd;
-    }
-    .resume-link:hover {
-      color: #0947b4;
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    /* Hero Section */
-    .hero {
-      background: #ffffff url('https://source.unsplash.com/1600x900/?technology,code') center/cover no-repeat;
-      min-height: 65vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      color: #fff;
-    }
-    .hero .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-name {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .hero-title {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
+    <title>Oliver Wang</title>
 
-    /* Experience & Education Cards */
-    .timeline-entry {
-      margin-bottom: 2rem;
-    }
-    .timeline-entry h4 {
-      font-size: 1.25rem;
-      margin-bottom: 0.2rem;
-      font-weight: 600;
-    }
-    .timeline-entry h5 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #6c757d;
-      margin-bottom: 0.5rem;
-    }
-    .timeline-entry ul {
-      margin-left: 1.2rem;
-      list-style-type: disc;
-    }
-    .timeline-entry ul li {
-      margin-bottom: 0.6rem;
-    }
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    /* Skills Tag Style */
-    .skill-tag {
-      display: inline-block;
-      background: #e9ecef;
-      border-radius: 4px;
-      padding: 6px 10px;
-      margin: 4px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #495057;
-    }
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    /* Footer */
-    footer {
-      padding: 1.5rem 0;
-      background-color: #212529;
-      color: #adb5bd;
-      text-align: center;
-    }
-    footer a {
-      color: #f8f9fa;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
-    @media (max-width: 768px) {
-      .hero-name {
-        font-size: 2.2rem;
-      }
-      .hero-title {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#top">
-      Oliver Wang
-    </a>
-    <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarContent" 
-      aria-controls="navbarContent" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img class="ow" src="img/ow.png">
+                </a>
+            </div>
 
-<!-- =========================
-     HERO SECTION
-========================= -->
-<div class="hero" id="top">
-  <div class="overlay"></div>
-  <div class="container hero-content">
-    <h1 class="hero-name">Oliver Wang</h1>
-    <p class="hero-title">Senior Software Engineer <br /> Los Angeles, CA</p>
-    <p>
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="#experience" class="btn btn-outline-light ms-2">View My Work</a>
-    </p>
-  </div>
-</div>
-
-<!-- =========================
-     ABOUT ME
-========================= -->
-<section id="about" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-heading text-center mb-4">About Me</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <p class="lead">
-          Full-time coder, part-time rock climber, and lifelong animal lover with a decade of full-stack development experience. I thrive in collaborative, creative environments and consistently go above and beyond to deliver high-quality projects on time.
-        </p>
-        <p>
-          My passion lies in building scalable, user-centric applications that push the boundaries of what’s possible. From modernizing legacy systems to pioneering AI-driven features, I enjoy tackling complex challenges and guiding projects from inception to successful deployment.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =========================
-     EXPERIENCE
-========================= -->
-<section id="experience" class="py-5">
-  <div class="container">
-    <h2 class="section-heading text-center mb-4">Professional Experience</h2>
-
-    <!-- Current / Most Recent -->
-    <div class="timeline-entry">
-      <h4>Full Stack Developer</h4>
-      <h5>Hive Talent Acquisition Technologies <span class="text-muted">| Remote / Startup</span> (Feb 2024 – Present)</h5>
-      <ul>
-        <li>Engineered an AI-based tax assistant from scratch in a fast-paced startup environment.</li>
-        <li>Developed front-end & backend features using Vue, Node.js, and Python for seamless AI chatbot interactions.</li>
-        <li>Integrated payment processing and subscription management via Stripe, optimizing billing operations.</li>
-        <li>Designed RAG frameworks with LLMs to deliver context-aware, highly accurate responses.</li>
-      </ul>
-    </div>
-
-    <div class="timeline-entry">
-      <h4>Senior Software Engineer</h4>
-      <h5>UNIS Fulfillment and Transportation <span class="text-muted">| Buena Park, CA</span> (Sept 2023 – Feb 2024)</h5>
-      <ul>
-        <li>Directed front-end development upgrading a complex application from Vue 2 to Vue 3.</li>
-        <li>Developed data visualization components using Chart.js for real-time analytics.</li>
-        <li>Created a shared component library & design system, accelerating development and maintaining UX consistency.</li>
-        <li>Provided mentorship to junior engineers, fostering best practices & removing blockers.</li>
-      </ul>
-    </div>
-
-    <div class="timeline-entry">
-      <h4>Senior Software Engineer</h4>
-      <h5>Path Crypto <span class="text-muted">| Remote / Chicago, IL</span> (Apr 2022 – Dec 2022)</h5>
-      <ul>
-        <li>Led a team to upgrade a large-scale application from Vue 2 to Vue 3, introducing advanced state management.</li>
-        <li>Collaborated closely with design teams to implement a reusable design system in Figma and code.</li>
-        <li>Spearheaded the transition to a monorepo setup, simplifying deployments and improving code organization.</li>
-      </ul>
-    </div>
-
-    <div class="timeline-entry">
-      <h4>Software Developer / Senior Consultant</h4>
-      <h5>Educe Group <span class="text-muted">| Remote / Bethesda, MD</span> (Mar 2019 – Apr 2022)</h5>
-      <ul>
-        <li>Architected and built a full-stack compliance application using Vue, Vuetify, Nuxt, AWS, and MySQL, cutting processing time significantly.</li>
-        <li>Developed microapps and learning management features, integrating front-end & back-end seamlessly.</li>
-        <li>Optimized SQL stored procedures and improved UI performance through reusable complex state components.</li>
-      </ul>
-    </div>
-
-    <div class="timeline-entry">
-      <h4>Software Developer</h4>
-      <h5>Database Works <span class="text-muted">| Brea, CA</span> (Jun 2017 – Mar 2019)</h5>
-      <ul>
-        <li>Spearheaded modernization of a legacy Delphi application into a scalable React-based platform using C#.NET.</li>
-        <li>Enhanced performance and maintainability by architecting new front-end & restructured back-end APIs.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- =========================
-     SKILLS
-========================= -->
-<section id="skills" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-heading text-center mb-4">Skills</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-10 text-center">
-        <!-- "STRONG" Skills -->
-        <h5 class="subheading">Strong</h5>
-        <span class="skill-tag">Vue</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Nuxt/Next</span>
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">Jira</span>
-        <span class="skill-tag">HTML5/SCSS</span>
-        <span class="skill-tag">AI & Machine Learning</span>
-
-        <!-- "Experienced" Skills -->
-        <h5 class="subheading mt-4">Experienced</h5>
-        <span class="skill-tag">jQuery</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">AWS</span>
-        <span class="skill-tag">Google Cloud</span>
-        <span class="skill-tag">Angular</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">C#.NET</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">OAuth</span>
-        <span class="skill-tag">Unit Testing</span>
-        <span class="skill-tag">Backbone</span>
-        <span class="skill-tag">CI/CD</span>
-        <span class="skill-tag">ORMs</span>
-        <span class="skill-tag">Svelte</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =========================
-     EDUCATION
-========================= -->
-<section id="education" class="py-5">
-  <div class="container">
-    <h2 class="section-heading text-center mb-4">Education</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <!-- Hack Reactor -->
-        <div class="timeline-entry">
-          <h4>Hack Reactor (Advanced Software Engineering Immersive)</h4>
-          <h5>2013</h5>
-          <p>Gained in-depth expertise in full-stack JavaScript, building sophisticated web applications and honing problem-solving skills via real-world coding challenges.</p>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- UC Davis -->
-        <div class="timeline-entry">
-          <h4>University of CA, Davis</h4>
-          <h5>B.S. in Animal Science & Management, 2017</h5>
-          <p>Developed a strong analytical foundation and a passion for problem-solving that later evolved into a successful career in software engineering.</p>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="brand-heading">Oliver Wang</h2>
+                        <p class="intro-text">Full Stack Developer.
+                            <br>Angular 1.5/2, Node, Express.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- =========================
-     CONTACT
-========================= -->
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-heading text-center mb-4">Contact</h2>
-    <div class="row justify-content-center mb-4">
-      <div class="col-md-6 text-center">
-        <p class="fs-5">
-          <strong>Email:</strong> <a href="mailto:oliv3r.wang@gmail.com">oliv3r.wang@gmail.com</a><br/>
-          <strong>Phone:</strong> <a href="tel:562-716-4851">562-716-4851</a>
-        </p>
-        <div class="d-flex justify-content-center mt-3">
-          <a href="https://github.com/oliv3rwang" class="me-3 text-dark" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a href="https://linkedin.com/in/oliver-wang" class="me-3 text-dark" target="_blank">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>EST. 2016</h2>
+                <p>My name is Oliver Wang. I am a full stack developer who's journey into code started with constructing Project Euler programming algorithms.   </p>
+                <p>My innate interest to code stems from a desire to create an application from the inception of an idea to a full-fledged product.</p>
+                <p>I have been a lover of animals long before I attained my degree in Animal Science & Management from <a href="https://www.ucdavis.edu/">University of California, Davis</a> but since then have completed my foundation in computer programming from <a href="http://www.hackreactor.com/">Hack Reactor</a>.</p>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Example prompt to link a PDF or external resume -->
-    <div class="row">
-      <div class="col text-center">
-        <a href="resume.pdf" class="resume-link" target="_blank">Download Full Resume (PDF)</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
-  <div class="container">
-    <p>© 2024 Oliver Wang — Senior Software Engineer</p>
-  </div>
-</footer>
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Oliver Wang</h2>
+                <div><a href="http://www.linkedin.com/in/oliver-wang/"><img class="linkedin" src="img/linkedin.svg"></a></div>
+                <p><a href="mailto:oliv3r.wang@gmail.com">oliv3r.wang@gmail.com</a></p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="http://twitter.com/oliverwang" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="http://github.com/oliv3rwang" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="http://plus.google.com/u/0/109942272492388457834" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<!-- Bootstrap 5 JS (CDN) + Popper -->
-<script 
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7mPuN3C9zD1TtjAd+7OXf9aZ3Q0F" 
-  crossorigin="anonymous">
-</script>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Oliver Wang 2017</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
 </body>
+
 </html>
